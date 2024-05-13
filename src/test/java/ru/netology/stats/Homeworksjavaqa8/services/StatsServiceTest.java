@@ -21,10 +21,10 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedaverageSum = 15;
-        double actualaverageSum = service.averageSumSales(sales);
+        long expected = 15;
+        long actual = service.averageSumSales(sales);
 
-        Assertions.assertEquals(expectedaverageSum, actualaverageSum);
+        Assertions.assertEquals(expected, actual);
     }
 
     @Test
@@ -48,28 +48,28 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expectedminSales, actualminSales);
     }
+
+
+    @Test
+    public void minAverageMonthSumSales() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        int expectedminAverageSumSales = 5;
+        int actualminAverageSumSales = service.minAverageSumSales(sales);
+
+        Assertions.assertEquals(expectedminAverageSumSales, actualminAverageSumSales);
+    }
+
+
+    @Test
+    public void maxAverageMonthSumSales() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        int expectedmaxAverageSumSales = 5;
+        int actualmaxAverageSumSales = service.maxAverageSumSales(sales);
+
+        Assertions.assertEquals(expectedmaxAverageSumSales, actualmaxAverageSumSales);
+    }
 }
-
-  //  @Test
-    //public void minAverageMonthSumSales() {
-      //  StatsService service = new StatsService();
-        //long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
-        //int expectedminAverageSumSales = 5;
-        //double actualminAverageSumSales = service.minAverageSumSales(sales);
-
-        //Assertions.assertEquals(expectedminAverageSumSales, actualminAverageSumSales);
-    //}
-
-
-  //      @Test
-  //      public void maxAverageMonthSumSales() {
-  //          StatsService service = new StatsService();
-  //          long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-
-  //          int expectedmaxAverageSumSales = 5;
-  //          double actualmaxAverageSumSales = service.maxAverageSumSales(sales);
-
- //           Assertions.assertEquals(expectedmaxAverageSumSales, actualmaxAverageSumSales);
-  //      }
- //   }
